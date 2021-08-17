@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mjawe"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-08-17 11:47:03 AM"/>
+        <attribute name="created" value="bWphd2U7REVTS1RPUC03VEUyOFBKOzIwMjEtMDgtMTY7MDk6NTk6MzIgQU07Mjg2MA=="/>
+        <attribute name="edited" value="bWphd2U7REVTS1RPUC03VEUyOFBKOzIwMjEtMDgtMTc7MTE6NDc6MDMgQU07NDsyOTYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="running" type="Boolean" array="False" size=""/>
+            <assign variable="running" expression="true"/>
+            <while expression="running">
+                <output expression="&quot;ENter a Number!&quot;" newline="True"/>
+                <declare name="in" type="Integer" array="False" size=""/>
+                <input variable="in"/>
+                <declare name="i" type="Integer" array="False" size=""/>
+                <for variable="i" start="1" end="in" direction="inc" step="1">
+                    <output expression="fizzBuzzChecker(i)" newline="True"/>
+                </for>
+            </while>
+        </body>
+    </function>
+    <function name="fizzBuzzChecker" type="String" variable="fizBuzzString">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fizBuzzString" type="String" array="False" size=""/>
+            <assign variable="fizBuzzString" expression="&quot;&quot;"/>
+            <if expression="num&gt;=1">
+                <then>
+                    <if expression="(num % 3 == 0) &amp;&amp; (num % 5 == 0)">
+                        <then>
+                            <assign variable="fizBuzzString" expression="&quot;FizzBuzz!&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="num % 5 == 0">
+                                <then>
+                                    <assign variable="fizBuzzString" expression="&quot;Buzzzz&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="num % 3 == 0">
+                                        <then>
+                                            <assign variable="fizBuzzString" expression="&quot;Fizzzz&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="fizBuzzString" expression="ToString(num)"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
